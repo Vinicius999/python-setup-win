@@ -18,12 +18,17 @@ Inicialmente, iremos instalar o Python no seu computador. Para isso, devemos:
 ![python-download](https://github.com/Vinicius999/python-setup-win/blob/main/images/python-download.png)
 
 
+### 2.1 - Pyenv
+
+Principais comandos do **Pyenv**:
+- `pyenv local <python-version>`: Configura a versão do Python que será usada no projeto. Este comando deve ser executado dentro da pasta do projeto
+
 ### 2.2 - Pip + Venv
 
 Principais comandos do **pip**:
-- `pip list`: lista todas as bibliotecas instaladas
-- `pip freeze`: lista e retorna todas as bibliotecas instaladas e suas respectivas versões
-- `pip uninstall <lib-name>`: Desinstala a biblioteca selecionada. Para desinstalar várias bibliotas de uma única vez, deve ser passado a lista dos nomes das bibliotecas separados por um espaço vazio. Ex: `pip uninstall pandas numpy steamlist`
+- `pip list`: lista todas as bibliotecas instaladas.
+- `pip freeze`: lista e retorna todas as bibliotecas instaladas e suas respectivas versões.
+- `pip uninstall <lib-name>`: Desinstala a biblioteca selecionada. Para desinstalar várias bibliotas de uma única vez, deve ser passado a lista dos nomes das bibliotecas separados por um espaço vazio. Ex: `pip uninstall pandas numpy steamlist`.
 - `pip freeze | grep -v "^-e" | xargs pip uninstall -y`: Desinstala todas as bibliotecas de uma vez.
 
 Principais comandos **venv**:
@@ -49,6 +54,16 @@ platformdirs 4.2.2
 userpath     1.9.2
 ```
 
-Principais comandos PipX:
+Principais comandos **PipX**:
 - `pip install pipx`: Instala o PipX.
 - `pipx install <lib-name>`: Instala biblioteca de forma global por usuário.
+
+### 2.4 - Poetry
+
+Principais comandos **Poetry**:
+- `poetry config virtualenvs.in-project true`: Informar ao poetry que ele deve tomar conta dos ambientes virtuais.
+- `poetry new <project-name>`: Cria a pasta do projeto estruturada, já contendo README.md, pasta de testes, pasta do projeto principal e arquivo de gerenciamento de bibliotecas.
+- `poetry env use <python-version>`: Cria o ambiente virtual e especifica qual a versão Python a ser usada. Deve ser usada a mesma versão especificada no comando `pyenv local <python-version>`
+- `poetry shell`: Ativa a visualização do terminal do Poetry para poder manipular e visualizar as bibliotecas no projeto atual.
+- `poetry add <lib-name>`: Instala a biblioteca especificada e suas dependências no ambiente virtual.
+- `poetry remove <lib-name>`: Desinstala a biblioteca especificada e suas dependências no ambiente virtual.
