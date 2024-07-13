@@ -23,4 +23,5 @@ Inicialmente, iremos instalar o Python no seu computador. Para isso, devemos:
 Principais comandos do **pip**:
 - `pip list`: lista todas as bibliotecas instaladas
 - `pip freeze`: lista e retorna todas as bibliotecas instaladas e suas respectivas versões
-
+- `pip uninstall <lib-name>`: Desinstala a biblioteca selecionada. Para desinstalar várias bibliotas de uma única vez, deve ser passado a lista dos nomes das bibliotecas separados por um espaço vazio. Ex: `pip uninstall pandas numpy steamlist`
+- `pip freeze | grep -v "^-e" | xargs pip uninstall -y`: Desinstala todas as bibliotecas de uma vez.
