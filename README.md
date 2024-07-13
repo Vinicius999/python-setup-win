@@ -15,7 +15,7 @@ Inicialmente, iremos instalar o Python no seu computador. Para isso, devemos:
 - Acessar o site oficial do Python: [`python.org`]([https://www.python.org/])
 - Na aba **Downloads**, clicar para baixar a versão mais recente do Python, como aparece na imagem abaxo.
 
-![python-download](images\python-download.png)
+![python-download](https://github.com/Vinicius999/python-setup-win/blob/main/images/python-download.png)
 
 
 ### 2.2 - Pip + Venv
