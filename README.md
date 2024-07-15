@@ -1,5 +1,10 @@
 <h1 align="center"> Setup Python for Windows </h1>
 
+<p>
+Este repositório foi desenvolvido com objetivo de ser um guia rápido para a criação de um setup Python profissional.
+</p>
+
+### Sumário
 <ul>
     <li>Python</li>
     <li>VS Code</li>
