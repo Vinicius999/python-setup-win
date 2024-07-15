@@ -61,9 +61,45 @@ Principais comandos **PipX**:
 ### 2.4 - Poetry
 
 Principais comandos **Poetry**:
-- `poetry config virtualenvs.in-project true`: Informar ao poetry que ele deve tomar conta dos ambientes virtuais.
+- `poetry config --list`: Lista as configurações do Poetry.
+- `poetry config virtualenvs.in-project true`: Informar ao poetry que ele deve a pasta `.venv` dos ambientes virtuais dentro dos diretórios dos projetos criados.
 - `poetry new <project-name>`: Cria a pasta do projeto estruturada, já contendo README.md, pasta de testes, pasta do projeto principal e arquivo de gerenciamento de bibliotecas.
 - `poetry env use <python-version>`: Cria o ambiente virtual e especifica qual a versão Python a ser usada. Deve ser usada a mesma versão especificada no comando `pyenv local <python-version>`
 - `poetry shell`: Ativa a visualização do terminal do Poetry para poder manipular e visualizar as bibliotecas no projeto atual.
 - `poetry add <lib-name>`: Instala a biblioteca especificada e suas dependências no ambiente virtual.
 - `poetry remove <lib-name>`: Desinstala a biblioteca especificada e suas dependências no ambiente virtual.
+- `poetry init`: Inicia o gerenciamento com o Poetry dentro de um projeto já existente.
+- `poetry install`: Verifica e instala as bibliotecas existentes no arquivo `pyproject.toml`.
+- `poetry show`: Mostra todas as dependencias instaladas e suas versões exatas.
+- `poetry show <lib-name>`: Mostra todas as informações de uma biblioteca instaladas.
+
+### 2.5 Trabalhando com **Pyenv + Poetry**
+
+1. Informar ao poetry que ele deve a pasta `.venv` dos ambientes virtuais dentro dos diretórios dos projetos criados:
+
+```
+poetry config virtualenvs.in-project true
+```
+
+2. Criar a pasta do projeto estruturada, já contendo:
+- pasta do projeto principal
+- pasta de testes
+- README.md
+- arquivo de gerenciamento de bibliotecas
+
+```
+poetry new <project-name>
+```
+
+3. Entrando na pasta do projeto criado pelo Poetry `cd <project-name>`, vamos configurar a versão do Python a ser usada no projeto.
+
+```
+pyenv local <python-version>
+```
+
+4. Criar o ambiente virtual `.venv` e especificar qual a versão Python a ser usada.
+
+```
+poetry env use <python-version>
+```
+
