@@ -70,6 +70,8 @@ Principais comandos **Poetry**:
 - `poetry config virtualenvs.in-project true`: Informar ao poetry que ele deve a pasta `.venv` dos ambientes virtuais dentro dos diretórios dos projetos criados.
 - `poetry new <project-name>`: Cria a pasta do projeto estruturada, já contendo README.md, pasta de testes, pasta do projeto principal e arquivo de gerenciamento de bibliotecas.
 - `poetry env use <python-version>`: Cria o ambiente virtual e especifica qual a versão Python a ser usada. Deve ser usada a mesma versão especificada no comando `pyenv local <python-version>`
+- `poetry install`: Ativa o ambiente virtual e instala as dependências.
+- `poetry env info`: Printa informações sobre o ambiente virtual que está sendo usado.
 - `poetry shell`: Ativa a visualização do terminal do Poetry para poder manipular e visualizar as bibliotecas no projeto atual.
 - `poetry add <lib-name>`: Instala a biblioteca especificada e suas dependências no ambiente virtual.
 - `poetry remove <lib-name>`: Desinstala a biblioteca especificada e suas dependências no ambiente virtual.
@@ -77,6 +79,7 @@ Principais comandos **Poetry**:
 - `poetry install`: Verifica e instala as bibliotecas existentes no arquivo `pyproject.toml`.
 - `poetry show`: Mostra todas as dependencias instaladas e suas versões exatas.
 - `poetry show <lib-name>`: Mostra todas as informações de uma biblioteca instaladas.
+
 
 ### 2.5 Trabalhando com **Pyenv + Poetry**
 
@@ -108,3 +111,38 @@ pyenv local <python-version>
 poetry env use <python-version>
 ```
 
+5. Instalar todas as dependências, caso haja.
+
+```
+poetry install
+```
+
+6. Ativar o ambinete virtual.
+
+```
+poetry shell
+```
+
+7. Instala a biblioteca especificada e suas dependências no ambiente virtual.
+
+```
+poetry add <lib-name>
+```
+
+9. Desinstala a biblioteca especificada e suas dependências no ambiente virtual.
+
+```
+poetry remove <lib-name>
+```
+
+10. Sair do ambiente virtual sem desativá-lo.
+
+```
+exit
+```
+
+11. Desativar o ambiente virtual.
+
+```
+deactivate
+```
